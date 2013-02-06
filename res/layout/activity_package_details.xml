@@ -1,0 +1,99 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/labelPackageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_package_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textPackageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelVersionCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_version_code"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textVersionCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelVersionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_version_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textVersionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelSourceDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_source_dir"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSourceDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelPublicSourceDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_public_source_dir"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textPublicSourceDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelNumberOfSignatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_number_of_signatures"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textNumberOfSignatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_signature"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+
+</ScrollView>

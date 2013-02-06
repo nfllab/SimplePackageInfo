@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Package Info</string>
+    <string name="title_activity_package_details">Package Details</string>
+    <string name="label_package_name">Package Name:</string>
+    <string name="label_version_code">Version Code:</string>
+    <string name="label_version_name">Version Name:</string>
+    <string name="label_source_dir">Source Dir:</string>
+    <string name="label_public_source_dir">Public Source Dir:</string>
+    <string name="label_number_of_signatures">Number of Signatures:</string>
+    <string name="label_signature">First Signature:</string>    
+
+</resources>
