@@ -1,5 +1,6 @@
 package com.nfllab.android.simplepackageinfo;
 
+import java.util.Arrays;
 import java.util.List;
 
 import android.os.Bundle;
@@ -25,6 +26,9 @@ public class PackageListActivity extends ListActivity {
 		for (int i = 0; i < packages.size(); i++) {
 			values[i] = packages.get(i).packageName;
 		}
+		// the package manager used to return the packages in alphabetical order,
+		// but it was changed some time ago
+		Arrays.sort(values);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
