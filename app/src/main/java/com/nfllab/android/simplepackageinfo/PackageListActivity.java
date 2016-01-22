@@ -32,6 +32,7 @@ public class PackageListActivity extends ListActivity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
+		getListView().setFastScrollEnabled(true);
 	}
 
 	@Override
