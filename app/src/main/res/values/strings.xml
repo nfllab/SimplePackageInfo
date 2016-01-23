@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Simple Package Info</string>
+    <string name="filter_hint">Search</string>
     <string name="title_activity_package_details">Package Details</string>
     <string name="label_package_name">Package Name:</string>
     <string name="label_version_code">Version Code:</string>

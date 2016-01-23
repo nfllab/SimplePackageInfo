@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.Arrays;
@@ -14,31 +17,61 @@ import java.util.List;
 
 public class PackageListActivity extends ListActivity {
 
-    private List<PackageInfo> packages;
+    private String[] packageNames;
+    private ArrayAdapter<String> adapter;
+
+    private void updateList(String filter) {
+        filter = filter.toLowerCase();
+        adapter.clear();
+        for (String pn : packageNames) {
+            if (pn.toLowerCase().contains(filter)) {
+                adapter.add(pn);
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_package_list);
+
         PackageManager pm = getPackageManager();
-        packages = pm
-                .getInstalledPackages(PackageManager.GET_UNINSTALLED_PACKAGES);
-        String[] values = new String[packages.size()];
+        List<PackageInfo> packages =
+                pm.getInstalledPackages(PackageManager.GET_UNINSTALLED_PACKAGES);
+        packageNames = new String[packages.size()];
         for (int i = 0; i < packages.size(); i++) {
-            values[i] = packages.get(i).packageName;
+            packageNames[i] = packages.get(i).packageName;
         }
-        // the package manager used to return the packages in alphabetical order,
-        // but it was changed some time ago
-        Arrays.sort(values);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, values);
+        Arrays.sort(packageNames);
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        updateList("");
         setListAdapter(adapter);
-        getListView().setFastScrollEnabled(true);
+
+        EditText editText = (EditText) findViewById(R.id.filter);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateList(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Intent intent = new Intent(this, PackageDetailsActivity.class);
-        intent.putExtra("package", packages.get(position).packageName);
+        intent.putExtra("package", adapter.getItem(position));
         startActivity(intent);
     }
 }
