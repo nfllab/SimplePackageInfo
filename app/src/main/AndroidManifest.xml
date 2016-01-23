@@ -12,18 +12,12 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.nfllab.android.simplepackageinfo.PackageDetailsActivity"
-            android:label="@string/title_activity_package_details"
-            android:parentActivityName="com.nfllab.android.simplepackageinfo.PackageListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nfllab.android.simplepackageinfo.PackageListActivity" />
-        </activity>
+            android:label="@string/title_activity_package_details" />
     </application>
 
 </manifest>
