@@ -13,170 +13,198 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_package_name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textPackageName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelVersionCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_version_code"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textVersionCode"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelVersionName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_version_name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textVersionName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelTargetSdkVersion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_target_sdk_version"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textTargetSdkVersion"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelSourceDir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_source_dir"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textSourceDir"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelPublicSourceDir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_public_source_dir"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textPublicSourceDir"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelEnabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_enabled"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textEnabled"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelSystemApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_system_app"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textSystemApp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelUpdatedSystemApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_updated_system_app"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textUpdatedSystemApp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelFirstInstallTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_first_install_time"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textFirstInstallTime"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelLastUpdateTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_last_update_time"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textLastUpdateTime"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelInstallerPackageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_installer_package_name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textInstallerPackageName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelNumberOfSignatures"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_number_of_signatures"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textNumberOfSignatures"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/labelSignature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_signature"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/textSignature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
-            android:typeface="monospace" />
+            android:typeface="monospace"
+            android:textIsSelectable="true" />
 
     </LinearLayout>
 
