@@ -7,9 +7,18 @@
     <string name="label_package_name">Package Name:</string>
     <string name="label_version_code">Version Code:</string>
     <string name="label_version_name">Version Name:</string>
+    <string name="label_target_sdk_version">Target SDK Version:</string>
     <string name="label_source_dir">Source Dir:</string>
     <string name="label_public_source_dir">Public Source Dir:</string>
+    <string name="label_enabled">Enabled:</string>
+    <string name="label_system_app">System App:</string>
+    <string name="label_updated_system_app">Updated System App:</string>
+    <string name="label_first_install_time">First Install Time:</string>
+    <string name="label_last_update_time">Last Update Time:</string>
+    <string name="label_installer_package_name">Installer Package Name:</string>
     <string name="label_number_of_signatures">Number of Signatures:</string>
     <string name="label_signature">First Signature:</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
 
 </resources>

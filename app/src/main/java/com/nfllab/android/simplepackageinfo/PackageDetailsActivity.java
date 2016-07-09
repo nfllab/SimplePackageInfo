@@ -33,6 +33,7 @@ import java.io.ByteArrayInputStream;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.util.Date;
 
 public class PackageDetailsActivity extends Activity {
 
@@ -44,6 +45,23 @@ public class PackageDetailsActivity extends Activity {
                 ab.setDisplayHomeAsUpEnabled(true);
             }
         }
+    }
+
+    private CharSequence getYesOrNo(boolean isYes) {
+        return isYes ? getResources().getText(R.string.yes) : getResources().getText(R.string.no);
+    }
+
+    private CharSequence getYesOrNo(int isYes) {
+        return getYesOrNo(isYes != 0);
+    }
+
+    private String getIntString(int a) {
+        return String.valueOf(a);
+    }
+
+    private String getTimeString(long timeMillis) {
+        Date d = new Date(timeMillis);
+        return d.toString();
     }
 
     @Override
@@ -62,16 +80,38 @@ public class PackageDetailsActivity extends Activity {
             TextView tv = (TextView) findViewById(R.id.textPackageName);
             tv.setText(packageName);
             tv = (TextView) findViewById(R.id.textVersionCode);
-            tv.setText(Integer.toString(packageInfo.versionCode));
+            tv.setText(getIntString(packageInfo.versionCode));
             tv = (TextView) findViewById(R.id.textVersionName);
             tv.setText(packageInfo.versionName);
             tv = (TextView) findViewById(R.id.textSourceDir);
             tv.setText(applicationInfo.sourceDir);
             tv = (TextView) findViewById(R.id.textPublicSourceDir);
             tv.setText(applicationInfo.publicSourceDir);
+            tv = (TextView) findViewById(R.id.textTargetSdkVersion);
+            tv.setText(getIntString(applicationInfo.targetSdkVersion));
+            tv = (TextView) findViewById(R.id.textEnabled);
+            tv.setText(getYesOrNo(applicationInfo.enabled));
+            tv = (TextView) findViewById(R.id.textSystemApp);
+            tv.setText(getYesOrNo(applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM));
+            tv = (TextView) findViewById(R.id.textUpdatedSystemApp);
+            tv.setText(getYesOrNo(applicationInfo.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP));
+            if (Build.VERSION.SDK_INT >= 9) {
+                tv = (TextView) findViewById(R.id.textFirstInstallTime);
+                tv.setText(getTimeString(packageInfo.firstInstallTime));
+                tv = (TextView) findViewById(R.id.textLastUpdateTime);
+                tv.setText(getTimeString(packageInfo.lastUpdateTime));
+            }
+            if (Build.VERSION.SDK_INT >= 5) {
+                tv = (TextView) findViewById(R.id.textInstallerPackageName);
+                String ipn = pm.getInstallerPackageName(packageName);
+                if (ipn == null) {
+                    ipn = "(null)";
+                }
+                tv.setText(ipn);
+            }
             Signature[] signatures = packageInfo.signatures;
             tv = (TextView) findViewById(R.id.textNumberOfSignatures);
-            tv.setText(Integer.toString(signatures.length));
+            tv.setText(getIntString(signatures.length));
             CertificateFactory X509Factory = CertificateFactory
                     .getInstance("X509");
             X509Certificate cert = (X509Certificate) X509Factory

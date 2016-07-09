@@ -45,6 +45,18 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/labelTargetSdkVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_target_sdk_version"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTargetSdkVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:id="@+id/labelSourceDir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,6 +77,78 @@
 
         <TextView
             android:id="@+id/textPublicSourceDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_enabled"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelSystemApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_system_app"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSystemApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelUpdatedSystemApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_updated_system_app"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textUpdatedSystemApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelFirstInstallTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_first_install_time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textFirstInstallTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelLastUpdateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_last_update_time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textLastUpdateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/labelInstallerPackageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_installer_package_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInstallerPackageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
