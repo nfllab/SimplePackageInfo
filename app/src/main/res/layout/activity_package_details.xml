@@ -8,6 +8,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_system_application_page"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onButtonClick" />
+
         <TextView
             android:id="@+id/labelPackageName"
             android:layout_width="wrap_content"

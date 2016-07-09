@@ -17,15 +17,18 @@ package com.nfllab.android.simplepackageinfo;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +39,8 @@ import java.security.cert.X509Certificate;
 import java.util.Date;
 
 public class PackageDetailsActivity extends Activity {
+
+    private String packageName;
 
     private void SetupActionBar() {
         // Show the Up button in the action bar.
@@ -71,7 +76,7 @@ public class PackageDetailsActivity extends Activity {
         SetupActionBar();
         try {
             Intent intent = getIntent();
-            String packageName = intent.getStringExtra("package");
+            packageName = intent.getStringExtra("package");
             PackageManager pm = getPackageManager();
             PackageInfo packageInfo = pm.getPackageInfo(packageName,
                     PackageManager.GET_UNINSTALLED_PACKAGES
@@ -128,6 +133,19 @@ public class PackageDetailsActivity extends Activity {
         } catch (CertificateException e) {
             Toast.makeText(this, "CertificateException", Toast.LENGTH_LONG)
                     .show();
+        }
+    }
+
+    public void onButtonClick(View v) {
+        // https://stackoverflow.com/questions/4421527/how-can-i-start-android-application-info-screen-programmatically
+        if (Build.VERSION.SDK_INT >= 9) {
+            try {
+                Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                intent.setData(Uri.parse("package:" + packageName));
+                startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                // just do nothing
+            }
         }
     }
 

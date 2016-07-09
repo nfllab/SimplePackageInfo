@@ -20,5 +20,6 @@
     <string name="label_signature">First Signature:</string>
     <string name="yes">yes</string>
     <string name="no">no</string>
+    <string name="open_system_application_page">Open System App Info</string>
 
 </resources>
